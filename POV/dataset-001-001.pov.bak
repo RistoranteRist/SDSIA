@@ -24,28 +24,16 @@ light_source {
   color rgb 1.0
 }
 
-#declare bgColor = <rnd(0.0, 1.0), rnd(0.0, 1.0), rnd(0.0, 1.0)>;
-#if (Mask = 0)
-  background { color rgb bgColor }
-#else
-  background { color White }
-#end
+background { color rgb <1.0, 1.0, 1.0> }
 
-#declare Target = box {
-  -1, 1
-  scale rnd(0.5, 1.5)
+#include "C:\Users\yamad\code\SDSIA\POV\pot.inc"
+#declare Target = object {
+  m_paoh6vdj
   rotate <rnd(-90.0, 90.0), rnd(-90.0, 90.0), rnd(-90.0, 90.0)>
   translate x * rnd(-3, 3)
   translate z * rnd(-3, 3)
   #if (Mask = 0)
-    pigment {
-      bozo 
-      scale 0.1
-      color_map { 
-        [0.0 color rgb <rnd(0.0, 1.0), rnd(0.0, 1.0), rnd(0.0, 1.0)>]
-        [1.0 color rgb <rnd(0.0, 1.0), rnd(0.0, 1.0), rnd(0.0, 1.0)>]
-      }
-    }
+    pigment { color White }
   #else
     texture {_texMaskTarget}
   #end

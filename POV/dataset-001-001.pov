@@ -10,7 +10,7 @@
 #declare _lookAt = <0.0,0.0,0.0>;
 
 camera {
-  location    <0.0,10.0,0.0>
+  location    <0.0,50.0,0.0>
   look_at     <0.0,0.0,0.0>
   right x
 }
@@ -26,13 +26,14 @@ light_source {
 
 background { color rgb <1.0, 1.0, 1.0> }
 
-#declare Target = box {
-  -1, 1
-  scale rnd(0.5, 1.5)
+#include "C:\Users\yamad\code\SDSIA\POV\pot.inc"
+#declare Target = object {
+  m_4m5mmqtw
+  rotate <rnd(-90.0, 90.0), rnd(-90.0, 90.0), rnd(-90.0, 90.0)>
   translate x * rnd(-3, 3)
   translate z * rnd(-3, 3)
   #if (Mask = 0)
-    pigment { color Red }
+    pigment { color White }
   #else
     texture {_texMaskTarget}
   #end
