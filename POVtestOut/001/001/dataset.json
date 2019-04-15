@@ -1,0 +1,59 @@
+{
+  "dataSet": "dataset-001-001",
+  "dataSetType": "1",
+  "desc": "unitTest",
+  "dim": {
+    "_dim": "2",
+    "_val": [
+      "10",
+      "20"
+    ]
+  },
+  "format": "png",
+  "nbMask": "1",
+  "nbSample": "3",
+  "samples": [
+    {
+      "bounding": [
+        [
+          "0.45",
+          "0.475",
+          "0.4",
+          "0.3"
+        ]
+      ],
+      "img": "img000.png",
+      "mask": [
+        "mask000-000.png"
+      ]
+    },
+    {
+      "bounding": [
+        [
+          "0.5",
+          "0.475",
+          "0.3",
+          "0.3"
+        ]
+      ],
+      "img": "img001.png",
+      "mask": [
+        "mask001-000.png"
+      ]
+    },
+    {
+      "bounding": [
+        [
+          "0.55",
+          "0.475",
+          "0.4",
+          "0.3"
+        ]
+      ],
+      "img": "img002.png",
+      "mask": [
+        "mask002-000.png"
+      ]
+    }
+  ]
+}

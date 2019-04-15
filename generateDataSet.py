@@ -126,7 +126,7 @@ class DataSet:
         
         # Create the command to render the image
         cmd = []
-        cmd.append("povray")
+        cmd.append("pvengine")
         cmd.append("+O" + imgFileName)
         cmd.append("-W" + self._dim["_val"][0])
         cmd.append("-H" + self._dim["_val"][1])
@@ -135,6 +135,8 @@ class DataSet:
         cmd.append("-Q9")
         cmd.append("+A")
         cmd.append("+k" + str(iRender))
+        cmd.append("/EXIT")
+        #cmd.append("/RENDER")
         if self._format == "png":
           povFormat = "+FN"
         elif self._format == "tga":
