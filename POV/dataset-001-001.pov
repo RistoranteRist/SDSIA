@@ -9,15 +9,14 @@
 #declare _posCamera = <0.0,10.0,0.0>;
 #declare _lookAt = <0.0,0.0,0.0>;
 
-camera {
-  location    <0.0,50.0,0.0>
-  look_at     <0.0,0.0,0.0>
-  right x
-}
-
 #macro rnd(A,B)
   (A+(B-A)*rand(RndSeed))
 #end
+camera {
+  location    <rnd(30.0, 50.0),rnd(30.0, 50.0),rnd(30.0, 50.0)>
+  look_at     <0.0,0.0,0.0>
+  right x
+}
 
 light_source {
   <rnd(-5.0, 5.0), 10.0, rnd(-5.0, 5.0)>

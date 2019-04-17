@@ -10,7 +10,7 @@
 #declare _lookAt = <0.0,0.0,0.0>;
 
 camera {
-  location    <0.0,10.0,0.0>
+  location    <0.0,rnd(50.0, 80.0),0.0>
   look_at     <0.0,0.0,0.0>
   right x
 }
@@ -28,7 +28,7 @@ background { color rgb <1.0, 1.0, 1.0> }
 
 #include "C:\Users\yamad\code\SDSIA\POV\pot.inc"
 #declare Target = object {
-  m_paoh6vdj
+  m_4m5mmqtw
   rotate <rnd(-90.0, 90.0), rnd(-90.0, 90.0), rnd(-90.0, 90.0)>
   translate x * rnd(-3, 3)
   translate z * rnd(-3, 3)
