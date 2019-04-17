@@ -7,7 +7,7 @@ if os.name == 'nt':
 
 else:
   povcmd = "povray"
-  exitcmd = ""
+  exitcmd = None
 # Base directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -142,7 +142,8 @@ class DataSet:
         cmd.append("-Q9")
         cmd.append("+A")
         cmd.append("+k" + str(iRender))
-        cmd.append(exitcmd)
+        if exitcmd: 
+          cmd.append(exitcmd)
         if self._format == "png":
           povFormat = "+FN"
         elif self._format == "tga":
