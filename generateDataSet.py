@@ -1,6 +1,13 @@
 # Import necessary modules
 import os, sys, json, glob, subprocess, re, shutil, cv2, numpy
+#
+if os.name == 'nt':
+  povcmd = "pvengine"
+  exitcmd = "/EXIT"
 
+else:
+  povcmd = "povray"
+  exitcmd = ""
 # Base directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -126,7 +133,7 @@ class DataSet:
         
         # Create the command to render the image
         cmd = []
-        cmd.append("povray")
+        cmd.append(povcmd)
         cmd.append("+O" + imgFileName)
         cmd.append("-W" + self._dim["_val"][0])
         cmd.append("-H" + self._dim["_val"][1])
@@ -135,6 +142,7 @@ class DataSet:
         cmd.append("-Q9")
         cmd.append("+A")
         cmd.append("+k" + str(iRender))
+        cmd.append(exitcmd)
         if self._format == "png":
           povFormat = "+FN"
         elif self._format == "tga":
